@@ -8,17 +8,20 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>test_title | fa11ing1eaf-blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Test~ 分割线这是一个强调内容这也是一个强调内容  有序列表 有序的列表3 有序的列表  { % codeblock [title] [lang:language] [url] [link text] % } code snippet { % endcodeblock % }">
+  <meta name="description" content="Test~ 分割线这是一个强调内容这也是一个强调内容  有序列表 有序的列表3 有序的列表  { % codeblock [title] [lang:language] [url] [link text] % } code snippet { % endcodeblock % }  大标题二三四五 引用  Do you think it is a idea?   list  早上的任务 起床 刷牙">
 <meta name="keywords" content="test_tag">
 <meta property="og:type" content="article">
 <meta property="og:title" content="test_title">
 <meta property="og:url" content="http://yoursite.com/2017/06/24/test/index.html">
 <meta property="og:site_name" content="fa11ing1eaf-blog">
-<meta property="og:description" content="Test~ 分割线这是一个强调内容这也是一个强调内容  有序列表 有序的列表3 有序的列表  { % codeblock [title] [lang:language] [url] [link text] % } code snippet { % endcodeblock % }">
-<meta property="og:updated_time" content="2017-06-24T10:44:07.000Z">
+<meta property="og:description" content="Test~ 分割线这是一个强调内容这也是一个强调内容  有序列表 有序的列表3 有序的列表  { % codeblock [title] [lang:language] [url] [link text] % } code snippet { % endcodeblock % }  大标题二三四五 引用  Do you think it is a idea?   list  早上的任务 起床 刷牙">
+<meta property="og:image" content="http://www.ifanr.com/wp-content/uploads/2011/05/zhihu.jpg">
+<meta property="og:image" content="http://yoursite.com/2017/06/24/test/images/temp_handbags.jpg">
+<meta property="og:updated_time" content="2017-06-25T04:33:04.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="test_title">
-<meta name="twitter:description" content="Test~ 分割线这是一个强调内容这也是一个强调内容  有序列表 有序的列表3 有序的列表  { % codeblock [title] [lang:language] [url] [link text] % } code snippet { % endcodeblock % }">
+<meta name="twitter:description" content="Test~ 分割线这是一个强调内容这也是一个强调内容  有序列表 有序的列表3 有序的列表  { % codeblock [title] [lang:language] [url] [link text] % } code snippet { % endcodeblock % }  大标题二三四五 引用  Do you think it is a idea?   list  早上的任务 起床 刷牙">
+<meta name="twitter:image" content="http://www.ifanr.com/wp-content/uploads/2011/05/zhihu.jpg">
   
     <link rel="alternative" href="#" title="fa11ing1eaf-blog" type="application/atom+xml">
   
@@ -184,6 +187,56 @@
 <p>{ % codeblock [title] [lang:language] [url] [link text] % }</p>
 <p>code snippet</p>
 <p>{ % endcodeblock % }</p>
+<hr>
+<h1 id="大标题"><a href="#大标题" class="headerlink" title="大标题"></a>大标题</h1><h2 id="二"><a href="#二" class="headerlink" title="二"></a>二</h2><h3 id="三"><a href="#三" class="headerlink" title="三"></a>三</h3><h4 id="四"><a href="#四" class="headerlink" title="四"></a>四</h4><h5 id="五"><a href="#五" class="headerlink" title="五"></a>五</h5><hr>
+<p>引用</p>
+<blockquote>
+<p>Do you think it is a idea?</p>
+</blockquote>
+<hr>
+<p>list</p>
+<ul>
+<li>早上的任务<ul>
+<li>起床</li>
+<li>刷牙</li>
+<li>洗脸</li>
+<li>吃饭</li>
+</ul>
+</li>
+<li><p>下午的任务</p>
+<ul>
+<li>逛街</li>
+<li>去商场</li>
+<li>买鞋子<ol>
+<li>买篮球鞋</li>
+<li>买皮鞋</li>
+<li>买xx鞋</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>晚上的任务</p>
+<ul>
+<li>活着回家</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>链接，图片，文档</p>
+<p><a href="http://www.zhihu.com" target="_blank" rel="external">知乎</a></p>
+<p>图片</p>
+<p><img src="http://www.ifanr.com/wp-content/uploads/2011/05/zhihu.jpg" alt="知乎的Logo"></p>
+<p>在文章的最后提供索引地址的方法</p>
+<hr>
+<p>插入本地图片和文档</p>
+<p><img src="images/temp_handbags.jpg" alt=""></p>
+<p>图片在首页显示正常, 而在post页面显示失败, 据Hexo的作者tommy351表示, 解决的方法需要将链接换成绝对路径.<br>用Google找了找解决方法, 发现一个可行的,</p>
+<blockquote>
+<p>npm install hexo-tag-asset-res –save<br>打开Hexo根目录, 找到_config.yml文件, 用任何一个文本编辑器打开, 找到如下代码<br>post_asset_folder: false<br>将 false 改成 true</p>
+</blockquote>
+<p>代码</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> os</div><div class="line"><span class="keyword">print</span> <span class="number">123</span></div></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;unistd.h&gt;</span></span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">    write(<span class="number">1</span>,<span class="string">"HelloWorld!\n"</span>,<span class="number">12</span>);</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
 

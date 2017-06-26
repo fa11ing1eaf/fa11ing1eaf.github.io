@@ -6,14 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | fa11ing1eaf-blog</title>
+  <title>zabbix_create | fa11ing1eaf-blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="fa11ing1eaf-blog">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455yum -y install mariadb*yum -y install gcc* make php php-gd php-mysql php-bcmath php-mbstring php-xm">
+<meta property="og:type" content="article">
+<meta property="og:title" content="zabbix_create">
+<meta property="og:url" content="http://yoursite.com/2017/06/26/zabbix-create/index.html">
 <meta property="og:site_name" content="fa11ing1eaf-blog">
+<meta property="og:description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455yum -y install mariadb*yum -y install gcc* make php php-gd php-mysql php-bcmath php-mbstring php-xm">
+<meta property="og:updated_time" content="2017-06-26T03:42:37.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="fa11ing1eaf-blog">
+<meta name="twitter:title" content="zabbix_create">
+<meta name="twitter:description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455yum -y install mariadb*yum -y install gcc* make php php-gd php-mysql php-bcmath php-mbstring php-xm">
   
     <link rel="alternative" href="#" title="fa11ing1eaf-blog" type="application/atom+xml">
   
@@ -149,98 +153,139 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-zabbix-create" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      zabbix_create
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/06/26/zabbix-create/" class="archive-article-date">
+
+        
+        <a href="/2017/06/26/zabbix-create/" class="archive-article-date">
   	<time datetime="2017-06-26T02:22:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-26</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/26/zabbix-create/">zabbix_create</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div></pre></td><td class="code"><pre><div class="line">yum -y install mariadb*</div><div class="line">yum -y install gcc* make php php-gd php-mysql php-bcmath php-mbstring php-xml curl curl-devel net-snmp  net-snmp-devel perl-DBI httpd mariadb* mysql-devel libxml2-devel unixODBC-devel net-snmp-devel OpenIPMI-devel vim</div><div class="line"></div><div class="line"></div><div class="line">systemctl stop firewalld.service</div><div class="line">systemctl <span class="built_in">disable</span> firewalld.service  </div><div class="line"></div><div class="line">setenforce 0</div><div class="line">sed -i <span class="string">'/^SELINUX/s/SELINUX=.*/SELINUX=disabled/g'</span> /etc/selinux/config</div><div class="line"></div><div class="line"><span class="comment"># install mariadb*</span></div><div class="line">service mariadb restart</div><div class="line">service mariadb status</div><div class="line"></div><div class="line"><span class="comment"># configure mariadb </span></div><div class="line"></div><div class="line">mysqladmin -u root -p password moresec\!@sec</div><div class="line"></div><div class="line">mysqlrootpass=moresec\!@sec</div><div class="line">mysql -uroot -p<span class="variable">$mysqlrootpass</span> -e <span class="string">'create database zabbix character set utf8 collate utf8_bin;'</span></div><div class="line">mysql -uroot -pmoresec\!@sec -e <span class="string">"create user 'zabbix'@'localhost' identified by 'zabbix';"</span></div><div class="line">mysql -uroot -pmoresec\!@sec -e <span class="string">"grant all on zabbix.* to 'zabbix'@'localhost' identified by 'zabbix' with grant option"</span></div><div class="line"></div><div class="line">mysql -uzabbix -pzabbix zabbix &lt; database/mysql/schema.sql</div><div class="line">mysql -uzabbix -pzabbix zabbix &lt; database/mysql/images.sql</div><div class="line">mysql -uzabbix -pzabbix zabbix &lt; database/mysql/data.sql</div><div class="line"></div><div class="line"><span class="comment"># configure zabbix</span></div><div class="line"></div><div class="line">useradd zabbix</div><div class="line"><span class="built_in">cd</span> zabbix-*</div><div class="line">./configure --<span class="built_in">enable</span>-server --<span class="built_in">enable</span>-agent --with-mysql --with-net-snmp --with-libcurl --with-libxml2 --with-openipmi --with-unixodbc</div><div class="line">make &amp;&amp; make install </div><div class="line"></div><div class="line"><span class="comment"># config php</span></div><div class="line">sed -i <span class="string">'s/date.timezone.*=.*/date.timezone = Asia\/Shanghai/'</span> /etc/php.ini</div><div class="line">sed -i <span class="string">'s/.*max_execution_time.*=.*/max_execution_time = 300/'</span> /etc/php.ini</div><div class="line">sed -i <span class="string">'s/.*post_max_size.*=.*/post_max_size = 32M/'</span> /etc/php.ini</div><div class="line">sed -i <span class="string">'s/.*memory_limit.*=.*/memory_limit = 128M/'</span> /etc/php.ini</div><div class="line">sed -i <span class="string">'s/.*mbstring.func_overload.*=.*/mbstring.func_overload = 1/'</span> /etc/php.ini</div><div class="line">sed -i <span class="string">'s/.*max_input_time.*=.*/max_input_time = 300/'</span> /etc/php.ini</div><div class="line">cat /etc/php.ini | grep -e <span class="string">'date.timezone'</span> -e <span class="string">'max_execution_time'</span> -e <span class="string">'post_max_size'</span> -e <span class="string">'memory_limit'</span> -e <span class="string">'mbstring.func_overload'</span> -e <span class="string">'max_input_time'</span></div><div class="line"></div><div class="line"><span class="comment"># deploy zabbix</span></div><div class="line">cp misc/init.d/fedora/core/zabbix_* /etc/init.d</div><div class="line"></div><div class="line">service zabbix_server start</div><div class="line">service zabbix_agentd start</div><div class="line">cp -r ./frontends/php/ /var/www/html/zabbix</div><div class="line"></div><div class="line">chown apache:apache /var/www/html/zabbix -R</div><div class="line">service httpd start</div><div class="line"></div><div class="line">sed -i <span class="string">'s/.*DBPassword.*=.*/DBPassword = zabbix/'</span> /usr/<span class="built_in">local</span>/etc/zabbix_server.conf</div><div class="line">service zabbix_server restart</div></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/06/26/zabbix-create/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/06/24/test/" class="archive-article-date">
-  	<time datetime="2017-06-24T10:21:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/24/test/">test_title</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">test_tag</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/test_category/" class="article-tag-list-link color4">test_category</a>
-        		</li>
-      		
-		</ul>
-	</div>
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2017/06/24/test/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">test_title</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+
+
+
   
   
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -263,8 +308,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

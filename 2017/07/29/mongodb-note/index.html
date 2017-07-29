@@ -6,18 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>mysql_5_7_19_udpate_password | fa11ing1eaf-blog</title>
+  <title>mongodb note | fa11ing1eaf-blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="mysql 重置密码 my.cnf 中添加 skip-grant-table或者mysqld_safe –skip-grant-tables &amp;amp; 这个时候就可以进入mysql了 123456789use mysql旧版本update user set password=PASSWORD(&amp;quot;newpass&amp;quot;) where user=&amp;quot;root&amp;quot;;从5.">
+  <meta name="description" content="增删查改1234567891011121314151617增：&amp;gt; db.person.insert(&amp;#123;&amp;quot;name&amp;quot;:&amp;quot;jack&amp;quot;,&amp;quot;age&amp;quot;:20&amp;#125;)WriteResult(&amp;#123; &amp;quot;nInserted&amp;quot; : 1 &amp;#125;)查：&amp;gt; db.person.find(&amp;#123;&amp;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="mysql_5_7_19_udpate_password">
-<meta property="og:url" content="http://yoursite.com/2017/07/22/mysql-5-7-19-udpate-password/index.html">
+<meta property="og:title" content="mongodb note">
+<meta property="og:url" content="http://yoursite.com/2017/07/29/mongodb-note/index.html">
 <meta property="og:site_name" content="fa11ing1eaf-blog">
-<meta property="og:description" content="mysql 重置密码 my.cnf 中添加 skip-grant-table或者mysqld_safe –skip-grant-tables &amp;amp; 这个时候就可以进入mysql了 123456789use mysql旧版本update user set password=PASSWORD(&amp;quot;newpass&amp;quot;) where user=&amp;quot;root&amp;quot;;从5.">
-<meta property="og:updated_time" content="2017-07-22T14:32:41.000Z">
+<meta property="og:description" content="增删查改1234567891011121314151617增：&amp;gt; db.person.insert(&amp;#123;&amp;quot;name&amp;quot;:&amp;quot;jack&amp;quot;,&amp;quot;age&amp;quot;:20&amp;#125;)WriteResult(&amp;#123; &amp;quot;nInserted&amp;quot; : 1 &amp;#125;)查：&amp;gt; db.person.find(&amp;#123;&amp;">
+<meta property="og:updated_time" content="2017-07-29T04:25:54.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="mysql_5_7_19_udpate_password">
-<meta name="twitter:description" content="mysql 重置密码 my.cnf 中添加 skip-grant-table或者mysqld_safe –skip-grant-tables &amp;amp; 这个时候就可以进入mysql了 123456789use mysql旧版本update user set password=PASSWORD(&amp;quot;newpass&amp;quot;) where user=&amp;quot;root&amp;quot;;从5.">
+<meta name="twitter:title" content="mongodb note">
+<meta name="twitter:description" content="增删查改1234567891011121314151617增：&amp;gt; db.person.insert(&amp;#123;&amp;quot;name&amp;quot;:&amp;quot;jack&amp;quot;,&amp;quot;age&amp;quot;:20&amp;#125;)WriteResult(&amp;#123; &amp;quot;nInserted&amp;quot; : 1 &amp;#125;)查：&amp;gt; db.person.find(&amp;#123;&amp;">
   
     <link rel="alternative" href="#" title="fa11ing1eaf-blog" type="application/atom+xml">
   
@@ -153,31 +153,30 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-mysql-5-7-19-udpate-password" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-mongodb-note" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      mysql_5_7_19_udpate_password
+      mongodb note
     </h1>
   
 
         
-        <a href="/2017/07/22/mysql-5-7-19-udpate-password/" class="archive-article-date">
-  	<time datetime="2017-07-22T14:30:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-22</time>
+        <a href="/2017/07/29/mongodb-note/" class="archive-article-date">
+  	<time datetime="2017-07-29T04:22:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-29</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>mysql 重置密码</p>
-<p>my.cnf 中添加 skip-grant-table<br>或者mysqld_safe –skip-grant-tables &amp;</p>
-<p>这个时候就可以进入mysql了</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">use mysql</div><div class="line"></div><div class="line">旧版本</div><div class="line">update user set password=PASSWORD(&quot;newpass&quot;) where user=&quot;root&quot;;</div><div class="line"></div><div class="line">从5.7开始</div><div class="line">update user set authentication_string=PASSWORD(&quot;123456&quot;) where user=&quot;root&quot;;</div><div class="line"></div><div class="line">flush privileges; 更新权限</div></pre></td></tr></table></figure>
-<p>重启mysql即可</p>
+        <ol>
+<li>增删查改<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">增：</div><div class="line">&gt; db.person.insert(&#123;&quot;name&quot;:&quot;jack&quot;,&quot;age&quot;:20&#125;)</div><div class="line">WriteResult(&#123; &quot;nInserted&quot; : 1 &#125;)</div><div class="line"></div><div class="line">查：</div><div class="line">&gt; db.person.find(&#123;&quot;name&quot;:&quot;jack&quot;&#125;)</div><div class="line">&#123; &quot;_id&quot; : ObjectId(&quot;597c0b47e54659e687ffc961&quot;), &quot;name&quot; : &quot;jack&quot;, &quot;age&quot; : 20 &#125;</div><div class="line"></div><div class="line"></div><div class="line">改：</div><div class="line">&gt; db.person.update(&#123;&quot;name&quot;:&quot;jae&quot;&#125;,&#123;&quot;name&quot;:&quot;jae&quot;,&quot;age&quot;:31&#125;)</div><div class="line">WriteResult(&#123; &quot;nMatched&quot; : 1, &quot;nUpserted&quot; : 0, &quot;nModified&quot; : 1 &#125;)</div><div class="line"></div><div class="line"></div><div class="line">删除：</div><div class="line">&gt; db.person.remove(&#123;&quot;name&quot;:&quot;joe&quot;&#125;)</div><div class="line">WriteResult(&#123; &quot;nRemoved&quot; : 1 &#125;)</div></pre></td></tr></table></figure>
+</li>
+</ol>
 
       
 
@@ -257,7 +256,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/07/22/mysql-5-7-19-udpate-password/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/07/29/mongodb-note/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -271,18 +270,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/07/29/mongodb-note/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          mongodb note
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/07/22/mysql-init/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">mysql_init</div>
+    <a href="/2017/07/22/mysql-5-7-19-udpate-password/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">mysql_5_7_19_udpate_password</div>
       <i class="icon-circle-right"></i>
     </a>
   

@@ -6,14 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>fa11ing1eaf-blog</title>
+  <title>ssh_ProxyCommand | fa11ing1eaf-blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="fa11ing1eaf-blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="配置ssh别名vi ~/.ssh/configHost dxx.sxx-bastion    hostname 54.65.xx.2xx    Port 18330    User ec2-userHost dxx.sxx-web1    hostname 10.0.x.xx    ProxyCommand ssh dxx.sxx-bastion -W %h:%p    User ubuntu 保">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ssh_ProxyCommand">
+<meta property="og:url" content="http://yoursite.com/2017/07/30/ssh-proxy/index.html">
 <meta property="og:site_name" content="fa11ing1eaf-blog">
+<meta property="og:description" content="配置ssh别名vi ~/.ssh/configHost dxx.sxx-bastion    hostname 54.65.xx.2xx    Port 18330    User ec2-userHost dxx.sxx-web1    hostname 10.0.x.xx    ProxyCommand ssh dxx.sxx-bastion -W %h:%p    User ubuntu 保">
+<meta property="og:updated_time" content="2017-07-30T15:01:41.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="fa11ing1eaf-blog">
+<meta name="twitter:title" content="ssh_ProxyCommand">
+<meta name="twitter:description" content="配置ssh别名vi ~/.ssh/configHost dxx.sxx-bastion    hostname 54.65.xx.2xx    Port 18330    User ec2-userHost dxx.sxx-web1    hostname 10.0.x.xx    ProxyCommand ssh dxx.sxx-bastion -W %h:%p    User ubuntu 保">
   
     <link rel="alternative" href="#" title="fa11ing1eaf-blog" type="application/atom+xml">
   
@@ -149,16 +153,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-ssh-proxy" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-ssh-proxy" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/30/ssh-proxy/">ssh_ProxyCommand</a>
+    <h1 class="article-title" itemprop="name">
+      ssh_ProxyCommand
     </h1>
   
 
@@ -178,64 +180,26 @@
       
 
       
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/30/ssh-proxy/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-mongodb-note" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/29/mongodb-note/">mongodb note</a>
-    </h1>
-  
-
-        
-        <a href="/2017/07/29/mongodb-note/" class="archive-article-date">
-  	<time datetime="2017-07-29T04:22:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ol>
-<li>增删查改<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">增：</div><div class="line">&gt; db.person.insert(&#123;&quot;name&quot;:&quot;jack&quot;,&quot;age&quot;:20&#125;)</div><div class="line">WriteResult(&#123; &quot;nInserted&quot; : 1 &#125;)</div><div class="line"></div><div class="line">查：</div><div class="line">&gt; db.person.find(&#123;&quot;name&quot;:&quot;jack&quot;&#125;)</div><div class="line">&#123; &quot;_id&quot; : ObjectId(&quot;597c0b47e54659e687ffc961&quot;), &quot;name&quot; : &quot;jack&quot;, &quot;age&quot; : 20 &#125;</div><div class="line"></div><div class="line"></div><div class="line">改：</div><div class="line">&gt; db.person.update(&#123;&quot;name&quot;:&quot;jae&quot;&#125;,&#123;&quot;name&quot;:&quot;jae&quot;,&quot;age&quot;:31&#125;)</div><div class="line">WriteResult(&#123; &quot;nMatched&quot; : 1, &quot;nUpserted&quot; : 0, &quot;nModified&quot; : 1 &#125;)</div><div class="line"></div><div class="line"></div><div class="line">删除：</div><div class="line">&gt; db.person.remove(&#123;&quot;name&quot;:&quot;joe&quot;&#125;)</div><div class="line">WriteResult(&#123; &quot;nRemoved&quot; : 1 &#125;)</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>2.细说增删查改</p>
-<p>mongodb支持js语法，很方便<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">&gt; var single=&#123;&quot;name&quot;:&quot;jack&quot;,&quot;password&quot;:&quot;12345&quot;,&quot;age&quot;:20&#125;</div><div class="line">&gt;</div><div class="line">&gt; db.user.insert(single)</div><div class="line">WriteResult(&#123; &quot;nInserted&quot; : 1 &#125;)</div><div class="line">&gt;</div><div class="line">&gt;</div><div class="line">&gt; single.name = &quot;joe&quot;</div><div class="line">joe</div><div class="line">&gt; single.age = 25</div><div class="line">25</div><div class="line">&gt;</div><div class="line">&gt; db.user.insert(single)</div><div class="line">WriteResult(&#123; &quot;nInserted&quot; : 1 &#125;)</div><div class="line">&gt;</div><div class="line">&gt; db.user.find()</div><div class="line">&#123; &quot;_id&quot; : ObjectId(&quot;597c0f9fe54659e687ffc968&quot;), &quot;name&quot; : &quot;jack&quot;, &quot;password&quot; : &quot;12345&quot;, &quot;age&quot; : 20 &#125;</div><div class="line">&#123; &quot;_id&quot; : ObjectId(&quot;597c0fbce54659e687ffc969&quot;), &quot;name&quot; : &quot;joe&quot;, &quot;password&quot; : &quot;12345&quot;, &quot;age&quot; : 25 &#125;</div><div class="line">&gt;</div></pre></td></tr></table></figure></p>
-<p>查找:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&gt; // find age &gt; 22</div><div class="line">&gt; db.user.find(&#123;&quot;age&quot;:&#123;$gt:22&#125;&#125;)</div><div class="line">&#123; &quot;_id&quot; : ObjectId(&quot;597c0fbce54659e687ffc969&quot;), &quot;name&quot; : &quot;joe&quot;, &quot;password&quot; : &quot;12345&quot;, &quot;age&quot; : 25 &#125;</div><div class="line">&gt; // $gt $gte $lt $lte $ne &lt;blank&gt;</div><div class="line">&gt;</div><div class="line">&gt; // find name=&apos;jack&apos;</div><div class="line">&gt;</div><div class="line">&gt; db.user.find(&#123;$where:function()&#123;  return this.name==&quot;joe&quot; &#125;&#125;)</div><div class="line">&#123; &quot;_id&quot; : ObjectId(&quot;597c0fbce54659e687ffc969&quot;), &quot;name&quot; : &quot;joe&quot;, &quot;password&quot; : &quot;12345&quot;, &quot;age&quot; : 25 &#125;</div></pre></td></tr></table></figure></p>
-<p>更新：<br>$inc,$set更新<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">&gt; db.user.find()</div><div class="line">&#123; &quot;_id&quot; : ObjectId(&quot;597c0f9fe54659e687ffc968&quot;), &quot;name&quot; : &quot;jack&quot;, &quot;password&quot; : &quot;12345&quot;, &quot;age&quot; : 20 &#125;</div><div class="line">&#123; &quot;_id&quot; : ObjectId(&quot;597c0fbce54659e687ffc969&quot;), &quot;name&quot; : &quot;joe&quot;, &quot;password&quot; : &quot;12345&quot;, &quot;age&quot; : 25 &#125;</div><div class="line">&gt;</div><div class="line">&gt; db.user.update(&#123;&quot;name&quot;:&quot;jack&quot;&#125;,&#123;$inc:&#123;&quot;age&quot;:30&#125;&#125;)</div><div class="line">WriteResult(&#123; &quot;nMatched&quot; : 1, &quot;nUpserted&quot; : 0, &quot;nModified&quot; : 1 &#125;)</div><div class="line">&gt;</div><div class="line">&gt; db.user.find()</div><div class="line">&#123; &quot;_id&quot; : ObjectId(&quot;597c0f9fe54659e687ffc968&quot;), &quot;name&quot; : &quot;jack&quot;, &quot;password&quot; : &quot;12345&quot;, &quot;age&quot; : 50 &#125;</div><div class="line">&#123; &quot;_id&quot; : ObjectId(&quot;597c0fbce54659e687ffc969&quot;), &quot;name&quot; : &quot;joe&quot;, &quot;password&quot; : &quot;12345&quot;, &quot;age&quot; : 25 &#125;</div><div class="line">&gt;</div><div class="line">&gt; db.user.update(&#123;&quot;name&quot;:&quot;jack&quot;&#125;,&#123;$set:&#123;&quot;age&quot;:10&#125;&#125;)</div><div class="line">WriteResult(&#123; &quot;nMatched&quot; : 1, &quot;nUpserted&quot; : 0, &quot;nModified&quot; : 1 &#125;)</div><div class="line">&gt;</div><div class="line">&gt; db.user.find()</div><div class="line">&#123; &quot;_id&quot; : ObjectId(&quot;597c0f9fe54659e687ffc968&quot;), &quot;name&quot; : &quot;jack&quot;, &quot;password&quot; : &quot;12345&quot;, &quot;age&quot; : 10 &#125;</div><div class="line">&#123; &quot;_id&quot; : ObjectId(&quot;597c0fbce54659e687ffc969&quot;), &quot;name&quot; : &quot;joe&quot;, &quot;password&quot; : &quot;12345&quot;, &quot;age&quot; : 25 &#125;</div><div class="line">&gt;</div></pre></td></tr></table></figure></p>
-<p>upsert:<br>如果没有查到，就在数据库里面增加一条，使用方法，在第三个参数设置为true.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&gt; db.user.update(&#123;&quot;name&quot;:&quot;bbb&quot;&#125;,&#123;&quot;age&quot;:66&#125;,true)</div><div class="line">WriteResult(&#123;</div><div class="line">	&quot;nMatched&quot; : 0,</div><div class="line">	&quot;nUpserted&quot; : 1,</div><div class="line">	&quot;nModified&quot; : 0,</div><div class="line">	&quot;_id&quot; : ObjectId(&quot;597c12c9a7c4da4389a0bbba&quot;)</div><div class="line">&#125;)</div><div class="line">&gt;</div><div class="line">&gt; db.user.find()</div><div class="line">&#123; &quot;_id&quot; : ObjectId(&quot;597c0f9fe54659e687ffc968&quot;), &quot;name&quot; : &quot;jack&quot;, &quot;password&quot; : &quot;12345&quot;, &quot;age&quot; : 10 &#125;</div><div class="line">&#123; &quot;_id&quot; : ObjectId(&quot;597c0fbce54659e687ffc969&quot;), &quot;name&quot; : &quot;joe&quot;, &quot;password&quot; : &quot;12345&quot;, &quot;age&quot; : 25 &#125;</div><div class="line">&#123; &quot;_id&quot; : ObjectId(&quot;597c12c9a7c4da4389a0bbba&quot;), &quot;age&quot; : 66 &#125;</div></pre></td></tr></table></figure></p>
-<p>3.细说高级操作</p>
-<p>聚合<br>count,distinct,group,mapReduce</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line">&gt; db.person.find()</div><div class="line">&#123; &quot;_id&quot; : ObjectId(&quot;597c21c32e630ac58eab778e&quot;), &quot;name&quot; : &quot;aaa&quot;, &quot;age&quot; : 14 &#125;</div><div class="line">&#123; &quot;_id&quot; : ObjectId(&quot;597c21c42e630ac58eab778f&quot;), &quot;name&quot; : &quot;aaa&quot;, &quot;age&quot; : 14 &#125;</div><div class="line">&#123; &quot;_id&quot; : ObjectId(&quot;597c21c42e630ac58eab7790&quot;), &quot;name&quot; : &quot;aaa&quot;, &quot;age&quot; : 14 &#125;</div><div class="line">&#123; &quot;_id&quot; : ObjectId(&quot;597c2239c45972bc584543fc&quot;), &quot;name&quot; : &quot;gob&quot;, &quot;age&quot; : 15 &#125;</div><div class="line">&#123; &quot;_id&quot; : ObjectId(&quot;597c2242c45972bc584543fd&quot;), &quot;name&quot; : &quot;gob2&quot;, &quot;age&quot; : 15 &#125;</div><div class="line">&#123; &quot;_id&quot; : ObjectId(&quot;597c224bc45972bc584543fe&quot;), &quot;name&quot; : &quot;gob3&quot;, &quot;age&quot; : 17 &#125;</div><div class="line">&gt;</div><div class="line">&gt; db.person.distinct(&quot;age&quot;)</div><div class="line">[ 14, 15, 17 ]</div><div class="line">&gt;</div><div class="line">&gt;</div><div class="line">&gt; db.person.group(&#123;</div><div class="line">... &quot;key&quot;:&#123;&quot;age&quot;:true&#125;,</div><div class="line">... &quot;initial&quot;:&#123;&quot;person&quot;:[]&#125;,</div><div class="line">... &quot;reduce&quot;:function(cur,prev)&#123;</div><div class="line">... prev.person.push(cur.name);</div><div class="line">... &#125;</div><div class="line">... &#125;</div><div class="line">... )</div><div class="line">[</div><div class="line">	&#123;</div><div class="line">		&quot;age&quot; : 14,</div><div class="line">		&quot;person&quot; : [</div><div class="line">			&quot;aaa&quot;,</div><div class="line">			&quot;aaa&quot;,</div><div class="line">			&quot;aaa&quot;</div><div class="line">		]</div><div class="line">	&#125;,</div><div class="line">	&#123;</div><div class="line">		&quot;age&quot; : 15,</div><div class="line">		&quot;person&quot; : [</div><div class="line">			&quot;gob&quot;,</div><div class="line">			&quot;gob2&quot;</div><div class="line">		]</div><div class="line">	&#125;,</div><div class="line">	&#123;</div><div class="line">		&quot;age&quot; : 17,</div><div class="line">		&quot;person&quot; : [</div><div class="line">			&quot;gob3&quot;</div><div class="line">		]</div><div class="line">	&#125;</div><div class="line">]</div><div class="line">&gt;</div></pre></td></tr></table></figure>
-
-      
-
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -244,494 +208,85 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/29/mongodb-note/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/07/30/ssh-proxy/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
 
-
-
-
-
   
-    <article id="post-mysql-5-7-19-udpate-password" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/22/mysql-5-7-19-udpate-password/">mysql_5_7_19_udpate_password</a>
-    </h1>
   
-
-        
-        <a href="/2017/07/22/mysql-5-7-19-udpate-password/" class="archive-article-date">
-  	<time datetime="2017-07-22T14:30:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>mysql 重置密码</p>
-<p>my.cnf 中添加 skip-grant-table<br>或者mysqld_safe –skip-grant-tables &amp;</p>
-<p>这个时候就可以进入mysql了</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">use mysql</div><div class="line"></div><div class="line">旧版本</div><div class="line">update user set password=PASSWORD(&quot;newpass&quot;) where user=&quot;root&quot;;</div><div class="line"></div><div class="line">从5.7开始</div><div class="line">update user set authentication_string=PASSWORD(&quot;123456&quot;) where user=&quot;root&quot;;</div><div class="line"></div><div class="line">flush privileges; 更新权限</div></pre></td></tr></table></figure>
-<p>重启mysql即可</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/22/mysql-5-7-19-udpate-password/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
+    <a href="/2017/07/29/mongodb-note/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">mongodb note</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
 
 
 
 
   
-    <article id="post-mysql-init" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/22/mysql-init/">mysql_init</a>
-    </h1>
   
 
-        
-        <a href="/2017/07/22/mysql-init/" class="archive-article-date">
-  	<time datetime="2017-07-21T17:21:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">wget https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm</div><div class="line">yum makecache</div><div class="line">ls</div><div class="line">rpm -ivh mysql57-community-release-el7-11.noarch.rpm</div><div class="line">yum makecache</div><div class="line">yum -y install mysql mysql-server</div><div class="line"></div><div class="line">grep &apos;temporary password&apos; /var/log/mysqld.log</div><div class="line">mysql -uroot -p</div><div class="line">ALTER USER &apos;root&apos;@&apos;localhost&apos; IDENTIFIED BY &apos;MyNewPass4!&apos;;</div></pre></td></tr></table></figure>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/22/mysql-init/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-post" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/21/post/">post</a>
-    </h1>
   
 
-        
-        <a href="/2017/07/21/post/" class="archive-article-date">
-  	<time datetime="2017-07-21T14:51:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>有乱码的文件名怎么批量改…</p>
-<p>do<br>  new=${file/.txt/}      # 这一步可以用sed, awk 命令替换<br>echo “$new”<br>echo “$file”<br>mv “$file” “$new”<br>done</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/21/post/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-update-time" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/20/update-time/">update_time</a>
-    </h1>
-  
-
-        
-        <a href="/2017/07/20/update-time/" class="archive-article-date">
-  	<time datetime="2017-07-19T16:14:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>rm -f /etc/localtime<br>ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime</p>
-<p>yum -y install ntpdate<br>ntpdate us.pool.ntp.org<br>date</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/20/update-time/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-install-python-mysql" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/20/install-python-mysql/">install_python_mysql</a>
-    </h1>
-  
-
-        
-        <a href="/2017/07/20/install-python-mysql/" class="archive-article-date">
-  	<time datetime="2017-07-19T16:04:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>yum groupinstall ‘Development Tools’<br>yum -y install python-devel<br>pip install MySQL-python</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/20/install-python-mysql/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-mysqlpassowrd" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/19/mysqlpassowrd/">mysqlpassowrd</a>
-    </h1>
-  
-
-        
-        <a href="/2017/07/19/mysqlpassowrd/" class="archive-article-date">
-  	<time datetime="2017-07-19T15:58:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>centos7.3 yum 安装 mysql-server<br>启动后要求重置密码</p>
-<p>mysql&gt; SET PASSWORD = PASSWORD(‘123456’);   //123456 是重置的新密码</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/19/mysqlpassowrd/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-zabbix-create" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/26/zabbix-create/">zabbix_create</a>
-    </h1>
-  
-
-        
-        <a href="/2017/06/26/zabbix-create/" class="archive-article-date">
-  	<time datetime="2017-06-26T02:22:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div></pre></td><td class="code"><pre><div class="line">yum -y install mariadb*</div><div class="line">yum -y install gcc* make php php-gd php-mysql php-bcmath php-mbstring php-xml curl curl-devel net-snmp  net-snmp-devel perl-DBI httpd mariadb* mysql-devel libxml2-devel unixODBC-devel net-snmp-devel OpenIPMI-devel vim telnet fping</div><div class="line"></div><div class="line"></div><div class="line">systemctl stop firewalld.service</div><div class="line">systemctl <span class="built_in">disable</span> firewalld.service  </div><div class="line"></div><div class="line">setenforce 0</div><div class="line">sed -i <span class="string">'/^SELINUX/s/SELINUX=.*/SELINUX=disabled/g'</span> /etc/selinux/config</div><div class="line"></div><div class="line"><span class="comment"># install mariadb*</span></div><div class="line">service mariadb restart</div><div class="line">service mariadb status</div><div class="line"></div><div class="line"><span class="comment"># configure mariadb </span></div><div class="line"></div><div class="line">mysqladmin -u root -p password moresec\!@sec</div><div class="line"></div><div class="line">mysqlrootpass=moresec\!@sec</div><div class="line">mysql -uroot -p<span class="variable">$mysqlrootpass</span> -e <span class="string">'create database zabbix character set utf8 collate utf8_bin;'</span></div><div class="line">mysql -uroot -pmoresec\!@sec -e <span class="string">"create user 'zabbix'@'localhost' identified by 'zabbix';"</span></div><div class="line">mysql -uroot -pmoresec\!@sec -e <span class="string">"grant all on zabbix.* to 'zabbix'@'localhost' identified by 'zabbix' with grant option"</span></div><div class="line"></div><div class="line">mysql -uzabbix -pzabbix zabbix &lt; database/mysql/schema.sql</div><div class="line">mysql -uzabbix -pzabbix zabbix &lt; database/mysql/images.sql</div><div class="line">mysql -uzabbix -pzabbix zabbix &lt; database/mysql/data.sql</div><div class="line"></div><div class="line"><span class="comment"># configure zabbix</span></div><div class="line"></div><div class="line">useradd zabbix</div><div class="line"><span class="built_in">cd</span> zabbix-*</div><div class="line">./configure --<span class="built_in">enable</span>-server --<span class="built_in">enable</span>-agent --with-mysql --with-net-snmp --with-libcurl --with-libxml2 --with-openipmi --with-unixodbc</div><div class="line">make &amp;&amp; make install </div><div class="line"></div><div class="line"><span class="comment"># config php</span></div><div class="line">sed -i <span class="string">'s/date.timezone.*=.*/date.timezone = Asia\/Shanghai/'</span> /etc/php.ini</div><div class="line">sed -i <span class="string">'s/.*max_execution_time.*=.*/max_execution_time = 300/'</span> /etc/php.ini</div><div class="line">sed -i <span class="string">'s/.*post_max_size.*=.*/post_max_size = 32M/'</span> /etc/php.ini</div><div class="line">sed -i <span class="string">'s/.*memory_limit.*=.*/memory_limit = 128M/'</span> /etc/php.ini</div><div class="line">sed -i <span class="string">'s/.*mbstring.func_overload.*=.*/mbstring.func_overload = 1/'</span> /etc/php.ini</div><div class="line">sed -i <span class="string">'s/.*max_input_time.*=.*/max_input_time = 300/'</span> /etc/php.ini</div><div class="line">cat /etc/php.ini | grep -e <span class="string">'date.timezone'</span> -e <span class="string">'max_execution_time'</span> -e <span class="string">'post_max_size'</span> -e <span class="string">'memory_limit'</span> -e <span class="string">'mbstring.func_overload'</span> -e <span class="string">'max_input_time'</span></div><div class="line"></div><div class="line"><span class="comment"># deploy zabbix</span></div><div class="line">cp misc/init.d/fedora/core/zabbix_* /etc/init.d</div><div class="line"></div><div class="line">service zabbix_server start</div><div class="line">service zabbix_agentd start</div><div class="line">cp -r ./frontends/php/ /var/www/html/zabbix</div><div class="line"></div><div class="line">chown apache:apache /var/www/html/zabbix -R</div><div class="line">service httpd start</div><div class="line"></div><div class="line">sed -i <span class="string">'s/.*DBPassword.*=.*/DBPassword = zabbix/'</span> /usr/<span class="built_in">local</span>/etc/zabbix_server.conf</div><div class="line">service zabbix_server restart </div><div class="line"></div><div class="line">chkconfig --add zabbix_server</div><div class="line">chkconfig zabbix_server on</div><div class="line">chkconfig --add zabbix_agentd</div><div class="line">chkconfig zabbix_agentd on</div></pre></td></tr></table></figure>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/06/26/zabbix-create/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-test" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/24/test/">test_title</a>
-    </h1>
-  
-
-        
-        <a href="/2017/06/24/test/" class="archive-article-date">
-  	<time datetime="2017-06-24T10:21:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-24</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Test~</p>
-<h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><p>这是一个<em>强调</em>内容<br>这也是一个<em>强调</em>内容</p>
-<ol>
-<li>有序列表</li>
-<li>有序的列表3</li>
-<li>有序的列表</li>
-</ol>
-<p>{ % codeblock [title] [lang:language] [url] [link text] % }</p>
-<p>code snippet</p>
-<p>{ % endcodeblock % }</p>
-<hr>
-<h1 id="大标题"><a href="#大标题" class="headerlink" title="大标题"></a>大标题</h1><h2 id="二"><a href="#二" class="headerlink" title="二"></a>二</h2><h3 id="三"><a href="#三" class="headerlink" title="三"></a>三</h3><h4 id="四"><a href="#四" class="headerlink" title="四"></a>四</h4><h5 id="五"><a href="#五" class="headerlink" title="五"></a>五</h5><hr>
-<p>引用</p>
-<blockquote>
-<p>Do you think it is a idea?</p>
-</blockquote>
-<hr>
-<p>list</p>
-<ul>
-<li>早上的任务<ul>
-<li>起床</li>
-<li>刷牙</li>
-<li>洗脸</li>
-<li>吃饭</li>
-</ul>
-</li>
-<li><p>下午的任务</p>
-<ul>
-<li>逛街</li>
-<li>去商场</li>
-<li>买鞋子<ol>
-<li>买篮球鞋</li>
-<li>买皮鞋</li>
-<li>买xx鞋</li>
-</ol>
-</li>
-</ul>
-</li>
-<li><p>晚上的任务</p>
-<ul>
-<li>活着回家</li>
-</ul>
-</li>
-</ul>
-<hr>
-<p>链接，图片，文档</p>
-<p><a href="http://www.zhihu.com" target="_blank" rel="external">知乎</a></p>
-<p>图片</p>
-<p><img src="http://www.ifanr.com/wp-content/uploads/2011/05/zhihu.jpg" alt="知乎的Logo"></p>
-<p>在文章的最后提供索引地址的方法</p>
-<hr>
-<p>插入本地图片和文档</p>
-<p><img src="images/temp_handbags.jpg" alt=""></p>
-<p>图片在首页显示正常, 而在post页面显示失败, 据Hexo的作者tommy351表示, 解决的方法需要将链接换成绝对路径.<br>用Google找了找解决方法, 发现一个可行的,</p>
-<blockquote>
-<p>npm install hexo-tag-asset-res –save<br>打开Hexo根目录, 找到_config.yml文件, 用任何一个文本编辑器打开, 找到如下代码<br>post_asset_folder: false<br>将 false 改成 true</p>
-</blockquote>
-<p>代码</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> os</div><div class="line"><span class="keyword">print</span> <span class="number">123</span></div></pre></td></tr></table></figure>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;unistd.h&gt;</span></span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">    write(<span class="number">1</span>,<span class="string">"HelloWorld!\n"</span>,<span class="number">12</span>);</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">test_tag</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/test_category/" class="article-tag-list-link color4">test_category</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/06/24/test/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
   
 
 
@@ -754,8 +309,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

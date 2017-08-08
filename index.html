@@ -151,6 +151,60 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-linux-open-coredump" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/08/08/linux-open-coredump/">linux_open_coredump</a>
+    </h1>
+  
+
+        
+        <a href="/2017/08/08/linux-open-coredump/" class="archive-article-date">
+  	<time datetime="2017-08-08T02:25:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ol>
+<li><p>ulimit -c unlimited  // 可以加入 /etc/profile<br>ulimit -c </p>
+</li>
+<li><p>/etc/sysctl.conf<br>kernel.core_pattern = /tmp/corefile/core.%e.%t</p>
+</li>
+</ol>
+<p>3.<br>sysctl -p </p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/08/08/linux-open-coredump/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
     <article id="post-ssh-proxy" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -603,135 +657,10 @@
 
 
   
-    <article id="post-test" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/24/test/">test_title</a>
-    </h1>
-  
-
-        
-        <a href="/2017/06/24/test/" class="archive-article-date">
-  	<time datetime="2017-06-24T10:21:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-24</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Test~</p>
-<h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><p>这是一个<em>强调</em>内容<br>这也是一个<em>强调</em>内容</p>
-<ol>
-<li>有序列表</li>
-<li>有序的列表3</li>
-<li>有序的列表</li>
-</ol>
-<p>{ % codeblock [title] [lang:language] [url] [link text] % }</p>
-<p>code snippet</p>
-<p>{ % endcodeblock % }</p>
-<hr>
-<h1 id="大标题"><a href="#大标题" class="headerlink" title="大标题"></a>大标题</h1><h2 id="二"><a href="#二" class="headerlink" title="二"></a>二</h2><h3 id="三"><a href="#三" class="headerlink" title="三"></a>三</h3><h4 id="四"><a href="#四" class="headerlink" title="四"></a>四</h4><h5 id="五"><a href="#五" class="headerlink" title="五"></a>五</h5><hr>
-<p>引用</p>
-<blockquote>
-<p>Do you think it is a idea?</p>
-</blockquote>
-<hr>
-<p>list</p>
-<ul>
-<li>早上的任务<ul>
-<li>起床</li>
-<li>刷牙</li>
-<li>洗脸</li>
-<li>吃饭</li>
-</ul>
-</li>
-<li><p>下午的任务</p>
-<ul>
-<li>逛街</li>
-<li>去商场</li>
-<li>买鞋子<ol>
-<li>买篮球鞋</li>
-<li>买皮鞋</li>
-<li>买xx鞋</li>
-</ol>
-</li>
-</ul>
-</li>
-<li><p>晚上的任务</p>
-<ul>
-<li>活着回家</li>
-</ul>
-</li>
-</ul>
-<hr>
-<p>链接，图片，文档</p>
-<p><a href="http://www.zhihu.com" target="_blank" rel="external">知乎</a></p>
-<p>图片</p>
-<p><img src="http://www.ifanr.com/wp-content/uploads/2011/05/zhihu.jpg" alt="知乎的Logo"></p>
-<p>在文章的最后提供索引地址的方法</p>
-<hr>
-<p>插入本地图片和文档</p>
-<p><img src="images/temp_handbags.jpg" alt=""></p>
-<p>图片在首页显示正常, 而在post页面显示失败, 据Hexo的作者tommy351表示, 解决的方法需要将链接换成绝对路径.<br>用Google找了找解决方法, 发现一个可行的,</p>
-<blockquote>
-<p>npm install hexo-tag-asset-res –save<br>打开Hexo根目录, 找到_config.yml文件, 用任何一个文本编辑器打开, 找到如下代码<br>post_asset_folder: false<br>将 false 改成 true</p>
-</blockquote>
-<p>代码</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> os</div><div class="line"><span class="keyword">print</span> <span class="number">123</span></div></pre></td></tr></table></figure>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;unistd.h&gt;</span></span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">    write(<span class="number">1</span>,<span class="string">"HelloWorld!\n"</span>,<span class="number">12</span>);</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">test_tag</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/test_category/" class="article-tag-list-link color4">test_category</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/06/24/test/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 
 
